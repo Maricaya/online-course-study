@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="edu.coursera.parallel.ReciprocalArraySumTest" time="48.275" tests="4" errors="0" skipped="0" failures="2">
+  <properties>
+    <property name="idea.version" value="2023.2.3"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/Users/xuluchu/Library/Java/JavaVirtualMachines/corretto-1.8.0_382/Contents/Home/jre/lib"/>
+    <property name="java.vm.version" value="25.382-b05"/>
+    <property name="gopherProxySet" value="false"/>
+    <property name="java.vm.vendor" value="Amazon.com Inc."/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/xuluchu/Desktop/suanfa/parallel-programming-in-java/miniproject_1"/>
+    <property name="java.vendor.url" value="https://aws.amazon.com/corretto/"/>
+    <property name="path.separator" value=":"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/Users/xuluchu/Desktop/suanfa/parallel-programming-in-java/miniproject_1"/>
+    <property name="java.runtime.version" value="1.8.0_382-b05"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/Users/xuluchu/Library/Java/JavaVirtualMachines/corretto-1.8.0_382/Contents/Home/jre/lib/endorsed"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="java.io.tmpdir" value="/var/folders/hc/9w1040d91b90zl470jlxj81m0000gn/T/"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="socksProxyPort" value="7890"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="https.proxyHost" value="127.0.0.1"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="maven.ext.class.path" value="/Applications/IntelliJ IDEA.app/Contents/plugins/maven/lib/maven-event-listener.jar"/>
+    <property name="classworlds.conf" value="/Applications/IntelliJ IDEA.app/Contents/plugins/maven/lib/maven3/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/xuluchu/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="http.proxyPort" value="7890"/>
+    <property name="jansi.passthrough" value="true"/>
+    <property name="maven.conf" value="/Applications/IntelliJ IDEA.app/Contents/plugins/maven/lib/maven3/conf"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="12.6"/>
+    <property name="http.nonProxyHosts" value="192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|127.0.0.1|localhost|*.localhost|local|*.local|timestamp.apple.com|*.timestamp.apple.com|sequoia.apple.com|*.sequoia.apple.com|seed-sequoia.siri.apple.com|*.seed-sequoia.siri.apple.com"/>
+    <property name="user.home" value="/Users/xuluchu"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="xuluchu"/>
+    <property name="java.class.path" value="/Applications/IntelliJ IDEA.app/Contents/plugins/maven/lib/maven3/boot/plexus-classworlds.license:/Applications/IntelliJ IDEA.app/Contents/plugins/maven/lib/maven3/boot/plexus-classworlds-2.7.0.jar:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar"/>
+    <property name="socksProxyHost" value="127.0.0.1"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/Users/xuluchu/Library/Java/JavaVirtualMachines/corretto-1.8.0_382/Contents/Home/jre"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2023.2.3 test"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="zh"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_382"/>
+    <property name="java.ext.dirs" value="/Users/xuluchu/Library/Java/Extensions:/Users/xuluchu/Library/Java/JavaVirtualMachines/corretto-1.8.0_382/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
+    <property name="http.proxyHost" value="127.0.0.1"/>
+    <property name="sun.boot.class.path" value="/Users/xuluchu/Library/Java/JavaVirtualMachines/corretto-1.8.0_382/Contents/Home/jre/lib/resources.jar:/Users/xuluchu/Library/Java/JavaVirtualMachines/corretto-1.8.0_382/Contents/Home/jre/lib/rt.jar:/Users/xuluchu/Library/Java/JavaVirtualMachines/corretto-1.8.0_382/Contents/Home/jre/lib/sunrsasign.jar:/Users/xuluchu/Library/Java/JavaVirtualMachines/corretto-1.8.0_382/Contents/Home/jre/lib/jsse.jar:/Users/xuluchu/Library/Java/JavaVirtualMachines/corretto-1.8.0_382/Contents/Home/jre/lib/jce.jar:/Users/xuluchu/Library/Java/JavaVirtualMachines/corretto-1.8.0_382/Contents/Home/jre/lib/charsets.jar:/Users/xuluchu/Library/Java/JavaVirtualMachines/corretto-1.8.0_382/Contents/Home/jre/lib/jfr.jar:/Users/xuluchu/Library/Java/JavaVirtualMachines/corretto-1.8.0_382/Contents/Home/jre/classes"/>
+    <property name="java.vendor" value="Amazon.com Inc."/>
+    <property name="java.specification.maintenance.version" value="5"/>
+    <property name="maven.home" value="/Applications/IntelliJ IDEA.app/Contents/plugins/maven/lib/maven3"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="https://github.com/corretto/corretto-8/issues/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="https.proxyPort" value="7890"/>
+    <property name="socksNonProxyHosts" value="192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|127.0.0.1|localhost|*.localhost|local|*.local|timestamp.apple.com|*.timestamp.apple.com|sequoia.apple.com|*.sequoia.apple.com|seed-sequoia.siri.apple.com|*.seed-sequoia.siri.apple.com"/>
+    <property name="ftp.nonProxyHosts" value="192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|127.0.0.1|localhost|*.localhost|local|*.local|timestamp.apple.com|*.timestamp.apple.com|sequoia.apple.com|*.sequoia.apple.com|seed-sequoia.siri.apple.com|*.seed-sequoia.siri.apple.com"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase name="testParSimpleTwoMillion" classname="edu.coursera.parallel.ReciprocalArraySumTest" time="0.233"/>
+  <testcase name="testParManyTaskTwoHundredMillion" classname="edu.coursera.parallel.ReciprocalArraySumTest" time="27.27">
+    <failure message="It was expected that the many-task parallel implementation would run at least 6.400000x faster, but it only achieved 1.000000x speedup" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: It was expected that the many-task parallel implementation would run at least 6.400000x faster, but it only achieved 1.000000x speedup
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.assertTrue(Assert.java:20)
+	at edu.coursera.parallel.ReciprocalArraySumTest.testParManyTaskTwoHundredMillion(ReciprocalArraySumTest.java:155)
+</failure>
+  </testcase>
+  <testcase name="testParSimpleTwoHundredMillion" classname="edu.coursera.parallel.ReciprocalArraySumTest" time="20.502"/>
+  <testcase name="testParManyTaskTwoMillion" classname="edu.coursera.parallel.ReciprocalArraySumTest" time="0.27">
+    <failure message="It was expected that the many-task parallel implementation would run at least 4.800000x faster, but it only achieved 1.000000x speedup" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: It was expected that the many-task parallel implementation would run at least 4.800000x faster, but it only achieved 1.000000x speedup
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.assertTrue(Assert.java:20)
+	at edu.coursera.parallel.ReciprocalArraySumTest.testParManyTaskTwoMillion(ReciprocalArraySumTest.java:143)
+</failure>
+  </testcase>
+</testsuite>
