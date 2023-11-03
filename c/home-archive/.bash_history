@@ -1009,3 +1009,203 @@ git add .
 git commit -m "11"
 git push
 grade
+cdl
+cd learn2prog/
+la
+cd 12_read_ptr2/
+la
+cp ../11_read_ptr1/Makefile .
+la
+vi Makefile 
+make
+la
+./test 
+./test > answer.txt
+la
+git add .
+git commit -m "12"
+git push
+grade
+cd learn2prog/13_read_arr1/
+vi answer.txt
+git add .
+git commit -m "13"
+git push
+grade
+git pull
+cat grade.txt 
+vi answer.txt 
+git status
+git add .
+git commit  -m "13"
+git push
+grade
+git pull
+cat grade.txt 
+git status
+la
+vi test.c 
+vi Makefile
+git add .
+git status
+git commit -m "13"
+git push
+grade
+cd learn2prog/14_array_max/
+la
+vi arrayMax.c 
+git add .
+git commit -m "14"
+git push
+grade
+git pull
+git push
+git pull
+la
+git status
+cd ../
+git add .
+git commit -m "14"
+git push
+cd 14_array_max/
+grade
+cd learn2prog/15_tests_subseq/
+./run_all.sh 
+cd /usr/local/l2p/subseq
+la
+cd ~/learn2prog/15_tests_subseq/
+la
+"#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+    int array1[] = { 77, 33, 19, 99, 42, 6, 27, 4};
+    int array2[] = { -3, -42, -99, -1000, -999, -88, -77};
+    int array3[] = { 425, 59, -3, 77, 0, 36};
+
+    size_t maxSeq (array1, 8);
+    size_t maxSeq (array2, 7);
+    size_t maxSeq (array3, 6);
+    size_t maxSeq (NULL, 0);
+    size_t maxSeq (array1, 0);
+
+    return EXIT_SUCCESS;
+}
+">> test-subseq.c
+vi test-subseq.c 
+./run_all.sh 
+vi test-subseq.c 
+./run_all.sh 
+vi test-subseq.c
+./run_all.sh 
+vi test-subseq.c
+./run_all.sh 
+vi test-subseq.c
+git add .
+./run_all.sh 
+vi test-subseq.c
+./run_all.sh 
+vi test-subseq.c
+./run_all.sh 
+vi test-subseq.c
+./run_all.sh 
+vi test-subseq.c
+./run_all.sh 
+vi test-subseq.c
+./run_all.sh 
+cd learn2prog/15_tests_subseq/
+la
+vi test-subseq.c
+./run_all.sh 
+vi test-subseq.c
+./run_all.sh 
+vi test-subseq.c
+./run_all.sh 
+vi test-subseq.c
+./run_all.sh 
+cd learn2prog/15_tests_subseq/
+la
+vi test-subseq.c
+rm test-subseq.c
+vi test-subseq.c
+./run_all.sh 
+vi test-subseq.c
+rm test-subseq.c
+vi test-subseq.c
+./run_all.sh 
+la
+rm test-subseq
+la
+rm .test-subseq.c.swn
+rm .test-subseq.c.swp
+rm .test-subseq.c.swo
+la
+./run_all.sh 
+;a
+la
+./test-subseq 
+la
+rm test-subseq.c
+vi test-subseq.c
+./run_all.sh 
+./test-subseq 
+vi test-subseq.c
+./run_all.sh 
+./test-subseq 
+rm test-subseq.c
+vi test-subseq.c
+./run_all.sh 
+vi test-subseq.c
+./run_all.sh 
+vi test-subseq.c
+./run_all.sh 
+vi test-subseq
+vi test-subseq.c
+./run_all.sh 
+vi test-subseq.c
+./run_all.sh 
+vi test-subseq.c
+./run_all.sh 
+vi test-subseq.c
+./run_all.sh 
+vi test-subseq.c
+/usr/local/l2p/subseq 
+vi test-subseq.c
+./run_all.sh 
+vi test-subseq.c
+./run_all.sh 
+cd learn2prog/15_tests_subseq/
+la
+./run_all.sh 
+vi test-subseq.c
+./run_all.sh 
+vi test-subseq.c
+./run_all.sh 
+vi test-subseq.c
+./run_all.sh 
+vi test-subseq
+vi test-subseq.c
+rm test-subseq.c
+vi test-subseq.c
+./run_all.sh 
+rm test-subseq.c
+vi test-subseq.c
+./run_all.sh 
+rm test-subseq.c
+vi test-subseq.c
+./run_all.sh 
+rm test-subseq.c
+vi test-subseq.c
+./run_all.sh 
+rm test-subseq.c
+vi test-subseq.c
+./run_all.sh 
+vi test-subseq.c
+./run_all.sh 
+vi test-subseq.c
+./run_all.sh 
+git status
+git add .
+git commit -m "15"
+git push
+grade
