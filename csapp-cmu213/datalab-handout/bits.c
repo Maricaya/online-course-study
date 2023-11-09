@@ -337,13 +337,10 @@ int howManyBits(int x) {
  *   Rating: 4
  */
 unsigned floatScale2(unsigned uf) {
-//    printf("uf : %d ", uf);
-//    unsigned sign = (uf & 0x80000000) >> 31;
     unsigned exponential = (uf & 0x7f800000) >> 23;
-//    printf("   uf & 0x7f800000: %d  ", uf & 0x7f800000);
-//    printf(" exponential: %d",  exponential);
+
     if (exponential == 0) {
-        return uf; // 1 | 0
+        return (uf&0x7fffffff)<<1|(uf & 0x80000000);
     }
     if (exponential == 255) {
         return uf;
@@ -366,8 +363,36 @@ unsigned floatScale2(unsigned uf) {
  *   Rating: 4
  */
 int floatFloat2Int(unsigned uf) {
-  return 2;
+    int Tmin = 1<<31;
+    int sign = (uf & 0x80000000) >> 31; // 第一位
+    int exponential = ((uf & 0x7f800000) >> 23) - 127;
+    if (exponential > 31) {
+        return Tmin;
+    }
+    if (exponential < 0) {
+        return 0;
+    }
+// 0000 0000 0111 1111 1111 1111 1111 1111
+// 0000 0000 1000 0000 0000 0000 0000 0000
+    // 补充上小数点前的 1
+    int fraction = (uf & 0x007fffff) | 0x00800000;
+
+    int ans;
+    // 小数 -》整数 >> 23
+    if (exponential > 23) {
+        // x 2
+        ans = fraction << (exponential - 23);
+    } else {
+        // x 0.5
+        ans = fraction >> (23 - exponential);
+    }
+
+    if (sign == 1) {
+        ans = ~ans+1;
+    }
+    return ans;
 }
+
 /* 
  * floatPower2 - Return bit-level equivalent of the expression 2.0^x
  *   (2.0 raised to the power x) for any 32-bit integer x.
@@ -382,5 +407,14 @@ int floatFloat2Int(unsigned uf) {
  *   Rating: 4
  */
 unsigned floatPower2(int x) {
-    return 2;
+    int exponential = x;
+    if (exponential > 127) {
+        return  0x7f800000; // +INF
+    }
+    int f_e = exponential + 127;
+    if (exponential < 0) {
+        return 0;
+    }
+    return f_e << 23;
 }
+
