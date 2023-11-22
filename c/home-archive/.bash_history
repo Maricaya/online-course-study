@@ -1209,3 +1209,244 @@ git add .
 git commit -m "15"
 git push
 grade
+cd learn2prog/16_subseq/
+la
+vi maxSeq.c
+git add .
+git commit -m "16"
+git push
+grade
+cd ../
+git add .
+git commit -m"16"
+cd 16_subseq/
+git push
+grade
+git pull
+cat grade.txt 
+vi maxSeq.c 
+git add .
+git commit -m "16"
+git push
+grade
+git pull
+cat grade.txt 
+la
+vi maxSeq.c 
+git status
+git add .
+git commit -m "16"
+git push
+grade
+git pull
+cat grade.txt 
+git pull 
+cat grade.txt 
+vi maxSeq.c 
+git add .
+git commit -m "16"
+git push
+grade
+git pull
+cat grade.txt 
+vi maxSeq.c 
+git add .
+git commit -m "16"
+git push
+grade
+cd learn2prog/17_read_arr2/
+la
+vi answer.txt
+vi Makefile
+git status
+git status .
+git add .
+git commit -m "17"
+git push
+grade
+cd learn2prog/18_reverse_str/
+la
+vi reverse.c
+rm reverse.c
+vi reverse.c
+git add .
+git commit -m "18"
+git push
+grade
+git pull
+cat grade.txt 
+vi reverse.c
+git add .
+git commit -m "18"
+git push
+grade
+git pull
+cat grade.txt 
+cd learn2prog/18_reverse_str/
+la
+vi reverse.c
+git add .
+git commit -m "18"
+git push
+grade
+git pull
+cat grade.txt 
+vi reverse.c
+git add .
+git commit -m "18"
+git push
+grade
+cd learn2prog/19_bits_arr/
+la
+rm numToBits.c 
+vi numToBits.v
+vi numToBits.c
+giit add .
+git add .
+git commit -m "19"
+git push
+grade
+la
+cd learn2prog/20_rot_matrix/
+la
+cd learn2prog/20_rot_matrix/
+vi rotate.c
+git add .
+git commit -m "20"
+git push
+grade
+git push
+cd ../
+git add .
+c d20
+cd 20_rot_matrix/
+git add .
+git commit -m "20"
+git push
+grade
+ls
+cd learn2prog/
+ls
+cd 21_read_rec1/
+ls
+vi test.c
+vi answer.txt
+git add .
+git commit -m "21"
+git push
+grade
+cd learn2prog/22_tests_power/
+ls
+cd /usr/local/l2p/power
+ls
+power.o 11 1
+./power.0
+./power.o
+bash ./power.o
+bash ./power.o 1 2
+cd ~/learn2prog/22_tests_power
+cd /usr/local/l2p/power
+gcc power.o -o power
+cd ~/learn2prog/22_tests_power
+vi test-power.c
+./run_all.sh 
+bash /usr/local/l2p/power/power.o 
+./run_all.sh /usr/local/l2p/power/power.o
+./run_all.sh /usr/local/l2p/power/power0.o
+cd learn2prog/21_read_rec1/
+ls
+cd ../
+cd 22_tests_power/
+ls
+cd learn2prog/22
+cd learn2prog/22_tests_power/
+ls
+vi a.c
+¨er.c /usr/local/l2p/power/power.o
+clear
+ls
+gcc -o a a.c /usr/local/l2p/power/power.o
+vi a.c
+gcc -o a a.c /usr/local/l2p/power/power.o
+./a 
+cd learn2prog/22_tests_power/
+ls
+vi test-power.c
+rm test-power.c
+vi test-power.c
+./run_all.sh 
+ll
+rm test-power.c
+vi test-power.c
+./run_all.sh 
+rm test-power.c
+vi test-power.c
+rm test-power.c
+vi test-power.c
+./run_all.sh 
+rm test-power.c
+./run_all.sh 
+vi test-power.c
+./run_all.sh 
+git add .
+git commit -m "22"
+git push
+grade
+cd learn2prog/22_tests_power/
+cd ../
+git add .
+git commit -m "22"
+git push
+cd 22_tests_power/
+grade
+cd learn2prog/23_power_rec/
+ls
+vi power.c
+cd learn2prog/23_power_rec/
+vi power.c 
+rm power.c 
+vi power.c 
+git add .
+git commit -m "23"
+git push
+grade
+git pull
+cat grade.txt 
+vi power.c 
+git add .
+git commit -m "23"
+git push
+grade
+git pull
+cat grade.txt 
+vi power.c 
+git add /
+git add .
+git commit -m "23"
+git push
+grade
+cd learn2prog/c3prj1_deck/
+ls
+vi deck.c
+rm deck.c
+vi deck.c
+make 
+./test-deck 
+git add .
+git commit -m "c3"
+git push
+grade
+cd ../
+git add .
+git commit -m "c3"
+git push
+cd c3prj1_deck/
+grade
+git pull
+cat grade.txt 
+vi deck
+vi deck.c
+git add .
+git commit -m "c3"
+git push
+grade

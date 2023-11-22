@@ -63,3 +63,4 @@ fun append (xs,ys) =
         x::xs' => x :: append(xs',ys)
       | [] => ys;
 
+val append: 'a list * 'a list -> 'a list
