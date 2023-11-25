@@ -213,7 +213,8 @@ echo "Starting tiny on ${tiny_port}"
 cd ./tiny
 ./tiny ${tiny_port}   &> /dev/null  &
 tiny_pid=$!
-cd ${HOME_DIR}
+#cd ${HOME_DIR}
+cd /root
 
 # Wait for tiny to start in earnest
 wait_for_port_use "${tiny_port}"
