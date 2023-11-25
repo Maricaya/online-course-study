@@ -4,9 +4,11 @@
 /* Recommended max cache and object sizes */
 #define MAX_CACHE_SIZE 1049000
 #define MAX_OBJECT_SIZE 102400
-
 /* You won't lose style points for including this long line in your code */
 //static const char *user_agent_hdr = "User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:10.0.3) Gecko/20120305 Firefox/10.0.3\r\n";
+
+#define SBUFSIZE 16
+#define NTHREADS 4
 
 typedef struct {
     int *buf;          /* Buffer array */
@@ -18,11 +20,14 @@ typedef struct {
     sem_t items;       /* Counts available items */
 } sbuf_t;
 
+sbuf_t sbuf; //连接缓冲区
+
 struct Uri {
     char host[MAXLINE]; //hostname
     char port[MAXLINE]; //端口
     char path[MAXLINE]; //路径
 };
+
 
 void sbuf_insert(sbuf_t *sp, int item) {
     P(&sp->slots);                          /* Wait for available slot */
@@ -31,6 +36,7 @@ void sbuf_insert(sbuf_t *sp, int item) {
     V(&sp->mutex);                          /* Unlock the buffer */
     V(&sp->items);                          /* Announce available item */
 }
+
 
 int sbuf_remove(sbuf_t *sp) {
     int item;
@@ -113,7 +119,6 @@ void build_header(char *http_header, struct Uri *uri_data, rio_t *client_rio) {
     return;
 }
 
-
 void doit(int connfd) {
     char buf[MAXLINE], method[MAXLINE], uri[MAXLINE], version[MAXLINE];
     char server[MAXLINE];
@@ -162,12 +167,40 @@ void sigpipe_handler(int sig) {
     return;
 }
 
+void *thread(void *vargp)
+{
+    Pthread_detach(pthread_self());
+    while(1){
+        //从缓冲区中读出描述符
+        int connfd = sbuf_remove(&sbuf);
+        //转发
+        doit(connfd);
+        //关闭客户端的连接描述符
+        Close(connfd);}
+}
+
+/* $begin sbuf_init */
+void sbuf_init(sbuf_t *sp, int n)
+{
+    sp->buf = Calloc(n, sizeof(int));
+    sp->n = n;                       /* Buffer holds max of n items */
+    sp->front = sp->rear = 0;        /* Empty buffer iff front == rear */
+    Sem_init(&sp->mutex, 0, 1);      /* Binary semaphore for locking */
+    Sem_init(&sp->slots, 0, n);      /* Initially, buf has n empty slots */
+    Sem_init(&sp->items, 0, 0);      /* Initially, buf has zero data items */
+}
+/* $end sbuf_init */
+
+
 int main(int argc, char **argv) {
     int listenfd, connfd;
     socklen_t clientlen;
     char hostname[MAXLINE], port[MAXLINE];
 
     struct sockaddr_storage clientaddr;
+
+    pthread_t tid;
+
     if (argc != 2) {
         fprintf(stderr, "usage :%s <port> \n", argv[0]);
         exit(1);
@@ -175,18 +208,28 @@ int main(int argc, char **argv) {
     signal(SIGPIPE, sigpipe_handler);    //捕获SIGPIPE信号
     //     打开监听描述符
     listenfd = Open_listenfd(argv[1]);
+
+    sbuf_init(&sbuf, SBUFSIZE);
+    //创建工作者线程
+    for(int i = 0; i < NTHREADS; i++)
+    {
+        Pthread_create(&tid, NULL, thread, NULL);
+    }
+
     while (1) {
         clientlen = sizeof(clientaddr);
         // 接受请求
         connfd = Accept(listenfd, (SA *) &clientaddr, &clientlen);
 
-        //
+        //向缓冲区写入这个描述符
+        sbuf_insert(&sbuf, connfd);
+
         Getnameinfo((SA *) &clientaddr, clientlen, hostname, MAXLINE, port, MAXLINE, 0);
         printf("Accepted connection from (%s %s).\n", hostname, port);
 
-        doit(connfd);
+//        doit(connfd);
         //关闭客户端的连接描述符
-        Close(connfd);
+//        Close(connfd);
     }
     return 0;
 }
