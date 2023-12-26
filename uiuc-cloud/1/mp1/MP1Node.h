@@ -31,8 +31,18 @@
 enum MsgTypes{
     JOINREQ,
     JOINREP,
-    DUMMYLASTMSGTYPE
+    GOSSIP_MESSAGE
 };
+
+typedef struct JoinReqMesg {
+    char addr[6];
+    long heartbeat;
+}JoinReqMesg;
+
+typedef struct GossipMesg {
+    long number_of_entry;
+    MemberListEntry entry_list[1];
+}GossipMesg;
 
 /**
  * STRUCT NAME: MessageHdr
@@ -40,8 +50,18 @@ enum MsgTypes{
  * DESCRIPTION: Header and content of a message
  */
 typedef struct MessageHdr {
-	enum MsgTypes msgType;
+    enum MsgTypes msgType;
 }MessageHdr;
+
+typedef union MessageData {
+    JoinReqMesg join_req_mesg;
+    GossipMesg gossip_mesg;
+}MessageData;
+
+typedef struct Message {
+    MessageHdr hdr;
+    MessageData data;
+}Message;
 
 /**
  * CLASS NAME: MP1Node
@@ -50,32 +70,46 @@ typedef struct MessageHdr {
  */
 class MP1Node {
 private:
-	EmulNet *emulNet;
-	Log *log;
-	Params *par;
-	Member *memberNode;
-	char NULLADDR[6];
-
+    EmulNet *emulNet;
+    Log *log;
+    Params *par;
+    Member *memberNode;
+    char NULLADDR[6];
+    int timestamp;
 public:
-	MP1Node(Member *, Params *, EmulNet *, Log *, Address *);
-	Member * getMemberNode() {
-		return memberNode;
-	}
-	int recvLoop();
-	static int enqueueWrapper(void *env, char *buff, int size);
-	void nodeStart(char *servaddrstr, short serverport);
-	int initThisNode(Address *joinaddr);
-	int introduceSelfToGroup(Address *joinAddress);
-	int finishUpThisNode();
-	void nodeLoop();
-	void checkMessages();
-	bool recvCallBack(void *env, char *data, int size);
-	void nodeLoopOps();
-	int isNullAddress(Address *addr);
-	Address getJoinAddress();
-	void initMemberListTable(Member *memberNode);
-	void printAddress(Address *addr);
-	virtual ~MP1Node();
+    MP1Node(Member *, Params *, EmulNet *, Log *, Address *);
+    Member * getMemberNode() {
+        return memberNode;
+    }
+    int recvLoop();
+    static int enqueueWrapper(void *env, char *buff, int size);
+    void nodeStart(char *servaddrstr, short serverport);
+    int initThisNode(Address *joinaddr);
+    int introduceSelfToGroup(Address *joinAddress);
+    int finishUpThisNode();
+    void nodeLoop();
+    void checkMessages();
+    bool recvCallBack(void *env, char *data, int size);
+    void nodeLoopOps();
+    int isNullAddress(Address *addr);
+    Address getJoinAddress();
+    void initMemberListTable(Member *memberNode);
+    void printAddress(Address *addr);
+    virtual ~MP1Node();
+private:
+    void handleJoinReq(Member *memberNode, JoinReqMesg *mesg_data);
+    void handleJoinRep(Member *memberNode);
+    void handleGossipMesg(Member *memberNode, GossipMesg *gossip_mesg);
+
+    void sendJoinRep(Address *addr);
+    void sendGossipMesg(Address *addr);
+
+    MemberListEntry *getMemberListEntryForId(int id);
+    void scanMembershipListForFailures();
+
+    int getTimeStamp() { return timestamp;}
+    vector<int> *_failedSet;
+
 };
 
 #endif /* _MP1NODE_H_ */

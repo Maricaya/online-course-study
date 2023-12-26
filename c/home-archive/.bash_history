@@ -1450,3 +1450,462 @@ git add .
 git commit -m "c3"
 git push
 grade
+cd learn2prog/
+cd c3prj2_eval/
+ls
+rm eval.c
+vi eval.c
+git add .
+git commit -m "c32"
+git push
+grade
+cd ../
+git add .
+git commit -m "c23"
+git push
+cd c2prj3
+cd c3prj2_eval/
+grade
+git pull
+cat grade.txt 
+ls
+rm eval.c
+vi eval.c
+cat eval
+cat eval.c
+vi eval.c
+rm eval.c
+vi eval.c
+git add .
+git commit -m "c32"
+git push
+grade
+git pull
+cat grade.txt 
+rm eval.c
+vi eval.c
+git add .
+git commit -m "c3p2"
+git push
+grade
+ls
+cd ;
+cd learn2prog/
+ls
+git add .
+git commit -m "Initial commit for Course 4"
+cd 21_read_rec1/
+ls
+cat README 
+ls
+cd learn2prog/
+ls
+git push
+git add .
+git status
+git log
+git commit -m "Initial commit for Course 4"
+git push
+ls
+cd 24_read_arr3/
+ls
+cat README 
+cat test.c 
+cd learn2prog/24_read_arr3/
+vi answer.txt
+git add .
+git commit -m "24"
+git push
+garde
+grade
+git pull
+cat grade.txt 
+cat test.c 
+vi answer.txt 
+git add.
+git add .
+git commit -m "24"
+git push
+grade
+git pull
+cat grade.txt 
+vi answer.txt 
+cat test.c 
+vi answer.txt 
+git add .
+git commit -m "24"
+git push
+grade
+cd learn2prog/
+ls
+cd 24_read_arr3/
+ls
+cat grade.txt 
+grade
+cd ../
+git add .
+cd learn2prog/
+git add .
+git commit -m "init"
+git push
+cd 24_read_arr3/
+grade
+cd learn2prog/
+ls
+cd 25_break_encr/
+ls
+vi main.c
+vi Makefile
+git add .
+git commit -m "25"
+git push
+grade
+git pull
+ls
+cat grade.txt 
+vi breaker.c
+vi main.c 
+vi Makefile 
+git add. 
+git add .
+git commit -m "25"
+git push
+grade
+git pull
+cat grade.txt 
+vi main.c 
+ls
+rm main.c 
+cat make
+make
+ls
+git add .
+git commit -m "25"
+git push
+git pull
+ls
+git pull
+git add .
+git commit -m "25"
+git push
+grade
+git pull
+cat grade.txt 
+vi breaker.c
+git add .
+git commit -m "25"
+git push
+git pull
+git add .
+git push
+git pull
+git add ,
+git add .
+git commit -m "@5"
+git push
+grade
+git pull
+grade
+cat grade.txt 
+git status
+grade
+cat grade.txt 
+vi breaker.c
+git add .
+git commit -m "25"
+git push
+grade
+git pull
+cat grade.txt 
+grade
+git pull
+make
+git add .
+git commit -m "25"
+git push
+grade
+git pull
+cat grade.txt 
+cd learn2prog/25_break_encr/
+ls
+cat grade.txt 
+rm breaker.c
+vi breaker.c
+git add .
+git commit -m "25"
+git push
+grade
+cat grade.txt 
+rm breaker.c
+vi breaker.c
+git add .
+git commit -m "25"
+git push
+grade
+rm breaker.c
+vi breaker.c
+git add .
+git commit -m "25"
+git push
+grade
+cat grade.txt 
+rm breaker.c
+vi breaker.c
+git add .
+git commit -m "25"
+git push
+grade
+cat grade.txt 
+vi breaker.c
+git add .
+git commit -m "25"
+git push
+grade
+cat grade.txt 
+vi breaker.c
+git add .
+git commit -m "25"
+git push
+grade
+cat grade.txt 
+rm breaker.c
+vi breaker.c
+git add .
+git commit -m "25"
+git push
+grade
+cat grade.txt 
+rm breaker.c
+vi breaker.c
+git add .
+git commit -m "25"
+git push
+grade
+cat grade.txt 
+rm breaker.c
+vi breaker.c
+git add .
+git commit -m "25"
+git push
+grade
+cat grade.txt 
+rm breaker.c
+vi breaker.c
+git add .
+git commit -m "25"
+git push
+grade
+rm breaker.c
+vi breaker.c
+git add .
+git commit -m "25"
+git push
+grade
+cat grade.txt 
+ls
+cd learn2prog/
+ls
+cd 25_break_encr/
+ls
+vi breaker.c
+rm breaker.c
+vi breaker.c
+make
+vi breaker.c
+make
+git add .
+git commit -m "25"
+git  push
+grade
+git pull
+cat grade.txt 
+ls
+rm breaker.c
+vi breaker.c
+make
+git add .
+git commit -m "25"
+git push
+grade
+git pull
+grade
+cat grade.txt 
+vi breaker.c
+git add .
+git commit -m "25"
+git push
+grade
+cat grade.txt 
+rm breaker.c
+vi breaker.c
+git add .
+git commit -m "25"
+git push
+grade
+cat grade.txt 
+rm breaker.c
+vi breaker.c
+git add.
+git add .
+git commit -m "25"
+git push
+grade
+cat grade.txt 
+rm breaker.c
+vi breaker.c
+git add .
+git commit -m "25"
+git push
+grade
+cat grade.txt 
+rm breaker.c
+vi breaker.c
+git add .
+git commit -m "25"
+git push
+grade
+cat grade.txt 
+cd learn2prog/
+ls
+cd 26_tests_matrix_input/
+vi tests.txt
+vi 1_test.txt
+vi 2_test.txt
+./run_all.sh 
+vi 3_test.txt
+echo "3_test.txt" >> tests.txt 
+cat tests.txt 
+./run_all.sh 
+vi 4_test.txt
+echo "3_test.txt" >> tests.txt
+echo "3_test.txt" >>ests.txt
+./run_all.sh 
+vi tests.txt 
+./run_all.sh 
+cat tests.txt 
+vi 5_test.txt
+vi 5_test.txt 
+cat tests.txt 
+ehco "5_test.txt" >> tests.txt 
+t.txt" >> tests.txt 
+
+
+echo "5_test.txt" >> tests.txt
+./run_all.sh 
+cat run_all.sh 
+cat tests.txt 
+vi 5_test.txt 
+./run_all.sh 
+vi 5_test.txt 
+./run_all.sh 
+cd learn2prog/
+ls
+cd 26_tests_matrix_input/
+vi 5_test.txt 
+./run_all.sh 
+cat tests.txt 
+vi tests.txt 
+./run_all.sh 
+vi 5_test.txt 
+cat 5_test.txt 
+vi 5_test.txt 
+cat 5_test.txt 
+./run_all.sh 
+vi 5_test.txt 
+cat 5_test.txt 
+vi 6_test.txt
+cd learn2prog/
+ls
+cd learn2prog/25_break_encr/
+ls
+cd ../
+ls
+cd 26_tests_matrix_input/
+ls
+cd 5_test.txt 
+vi 5_test.txt 
+./run_all.sh 
+cat 5_test.txt 
+vi 5_test.txt 
+cat 5_test.txt 
+./r
+./run_all.sh 
+vi tests.txt 
+./run_all.sh 
+vi 6_test.txt
+ehco "6_test.txt" >> tests.txt 
+echo "6_test.txt" >> tests.txt
+./run_all.sh 
+vi 6_test.txt 
+./run_all.sh 
+vi 6_test.txt 
+./run_all.sh 
+vi 6_test.txt 
+./run_all.sh 
+vi 5_test.txt 
+cd learn2prog/
+ls
+cd 26_tests_matrix_input/
+ls
+vi 6_test.txt 
+vi -b 6_test.txt 
+./r
+./run_all.sh 
+git add .
+git commit -m "26"
+git push
+cd learn2prog/
+ls
+cd 26_tests_matrix_input/
+grade
+cd ../
+git add .
+git commit -m "26"
+git push
+cd 2
+cd 26_tests_matrix_input/
+git push
+grade
+cd learn2prog/27_matrix_input/
+vi rotateMatrix.c
+vi Makefile
+make
+git add .
+git commit -m "27"
+git push
+grade
+git pull
+cat grade.txt 
+cd learn2prog/
+ls
+cd 27_matrix_input/
+ls
+cat rotateMatrix.c
+cat grade.txt 
+rm rotateMatrix,c
+rm rotateMatrix.c
+vi rotateMatrix.c
+git add .
+git commit -m "27"
+git push
+grade
+cat grade.txt 
+vi rotateMatrix.c
+git add .
+git commit -m "27"
+git push
+grade
+cat grade.txt 
+rm rotateMatrix.c
+vi rotateMatrix.c
+git add .
+git commit -m "27"
+git push
+grade
+cat grade.txt 
+rm rotateMatrix.c
+vi rotateMatrix.c
+git add .
+git commit -m "27"
+git push
+grade

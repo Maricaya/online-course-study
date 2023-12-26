@@ -4,6 +4,7 @@
 /* Recommended max cache and object sizes */
 #define MAX_CACHE_SIZE 1049000
 #define MAX_OBJECT_SIZE 102400
+#define MAX_CACHE 10
 /* You won't lose style points for including this long line in your code */
 //static const char *user_agent_hdr = "User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:10.0.3) Gecko/20120305 Firefox/10.0.3\r\n";
 
@@ -28,6 +29,27 @@ struct Uri {
     char path[MAXLINE]; //路径
 };
 
+// Cache结构
+typedef struct
+{
+    char obj[MAX_OBJECT_SIZE];
+    char uri[MAXLINE];
+    int LRU;
+    int isEmpty;
+
+    int read_cnt; //读者数量
+    sem_t w;      //Cache信号量
+    sem_t mutex;  //read_cnt信号量
+
+} block;
+
+typedef struct
+{
+    block data[MAX_CACHE];
+    int num;
+} Cache;
+
+Cache cache;
 
 void sbuf_insert(sbuf_t *sp, int item) {
     P(&sp->slots);                          /* Wait for available slot */
@@ -119,15 +141,139 @@ void build_header(char *http_header, struct Uri *uri_data, rio_t *client_rio) {
     return;
 }
 
+//初始化Cache
+void init_Cache()
+{
+    cache.num = 0;
+    int i;
+    for (i = 0; i < MAX_CACHE; i++)
+    {
+        cache.data[i].LRU = 0;
+        cache.data[i].isEmpty = 1;
+        // w, mutex均初始化为1
+        Sem_init(&cache.data[i].w, 0, 1);
+        Sem_init(&cache.data[i].mutex, 0, 1);
+        cache.data[i].read_cnt = 0;
+    }
+}
+
+//从Cache中找到内容
+int get_Cache(char *url)
+{
+    int i;
+    for (i = 0; i < MAX_CACHE; i++)
+    {
+        //读者加锁
+        P(&cache.data[i].mutex);
+        cache.data[i].read_cnt++;
+        if (cache.data[i].read_cnt == 1)
+            P(&cache.data[i].w);
+        V(&cache.data[i].mutex);
+
+        if ((cache.data[i].isEmpty == 0) && (strcmp(url, cache.data[i].uri) == 0))
+            break;
+
+        P(&cache.data[i].mutex);
+        cache.data[i].read_cnt--;
+        if (cache.data[i].read_cnt == 0)
+            V(&cache.data[i].w);
+        V(&cache.data[i].mutex);
+    }
+    if (i >= MAX_CACHE)
+        return -1;
+    return i;
+}
+
+//找到可以存放的缓存行
+int get_Index()
+{
+    int min = __INT_MAX__;
+    int minindex = 0;
+    int i;
+    for (i = 0; i < MAX_CACHE; i++)
+    {
+        //读锁
+        P(&cache.data[i].mutex);
+        cache.data[i].read_cnt++;
+        if (cache.data[i].read_cnt == 1)
+            P(&cache.data[i].w);
+        V(&cache.data[i].mutex);
+
+        if (cache.data[i].isEmpty == 1)
+        {
+            minindex = i;
+            P(&cache.data[i].mutex);
+            cache.data[i].read_cnt--;
+            if (cache.data[i].read_cnt == 0)
+                V(&cache.data[i].w);
+            V(&cache.data[i].mutex);
+            break;
+        }
+        if (cache.data[i].LRU < min)
+        {
+            minindex = i;
+            P(&cache.data[i].mutex);
+            cache.data[i].read_cnt--;
+            if (cache.data[i].read_cnt == 0)
+                V(&cache.data[i].w);
+            V(&cache.data[i].mutex);
+            continue;
+        }
+
+        P(&cache.data[i].mutex);
+        cache.data[i].read_cnt--;
+        if (cache.data[i].read_cnt == 0)
+            V(&cache.data[i].w);
+        V(&cache.data[i].mutex);
+    }
+
+    return minindex;
+}
+
+//更新LRU
+void update_LRU(int index)
+{
+    for (int i = 0; i < MAX_CACHE; i++)
+    {
+
+        if (cache.data[i].isEmpty == 0 && i != index)
+        {
+            P(&cache.data[i].w);
+            cache.data[i].LRU--;
+            V(&cache.data[i].w);
+        }
+    }
+}
+
+//写缓存
+void write_Cache(char *uri, char *buf)
+{
+
+    int i = get_Index();
+    //加写锁
+    P(&cache.data[i].w);
+    //写入内容
+    strcpy(cache.data[i].obj, buf);
+    strcpy(cache.data[i].uri, uri);
+    cache.data[i].isEmpty = 0;
+    cache.data[i].LRU = __INT_MAX__;
+    update_LRU(i);
+
+    V(&cache.data[i].w);
+}
+
 void doit(int connfd) {
     char buf[MAXLINE], method[MAXLINE], uri[MAXLINE], version[MAXLINE];
     char server[MAXLINE];
 
     rio_t rio, server_rio;
 
+    char cache_tag[MAXLINE];
+
     Rio_readinitb(&rio, connfd);
     Rio_readlineb(&rio, buf, MAXLINE);
     sscanf(buf, "%s %s %s", method, uri, version);
+    strcpy(cache_tag, uri);
 
     if (strcasecmp(method, "GET")) {
         printf("Proxy does not implement the method");
@@ -135,6 +281,29 @@ void doit(int connfd) {
     }
 
     struct Uri *uri_data = (struct Uri *) malloc(sizeof(struct Uri));
+
+    //判断uri是否缓存，若缓存，直接回复
+    int i;
+    if ((i = get_Cache(cache_tag)) != -1)
+    {
+        //加锁
+        P(&cache.data[i].mutex);
+        cache.data[i].read_cnt++;
+        if (cache.data[i].read_cnt == 1)
+            P(&cache.data[i].w);
+        V(&cache.data[i].mutex);
+
+        Rio_writen(connfd, cache.data[i].obj, strlen(cache.data[i].obj));
+
+        P(&cache.data[i].mutex);
+        cache.data[i].read_cnt--;
+        if (cache.data[i].read_cnt == 0)
+            V(&cache.data[i].w);
+        V(&cache.data[i].mutex);
+        return;
+    }
+
+
     //解析uri
     parse_uri(uri, uri_data);
 
@@ -151,14 +320,26 @@ void doit(int connfd) {
     Rio_readinitb(&server_rio, serverfd);
     Rio_writen(serverfd, server, strlen(server));
 
+    char cache_buf[MAX_OBJECT_SIZE];
+    int size_buf = 0;
+
     size_t n;
     //回复给客户端
     while ((n = Rio_readlineb(&server_rio, buf, MAXLINE)) != 0) {
-        printf("proxy received %d bytes,then send\n", (int) n);
+        //注意判断是否会超出缓存大小
+        size_buf += n;
+        if(size_buf < MAX_OBJECT_SIZE)
+            strcat(cache_buf, buf);
+        printf("proxy received %d bytes,then send\n", (int)n);
         Rio_writen(connfd, buf, n);
     }
     //关闭服务器描述符
     Close(serverfd);
+
+
+    if(size_buf < MAX_OBJECT_SIZE){
+        write_Cache(cache_tag, cache_buf);
+    }
 }
 
 /* 处理SIGPIPE信号 */
@@ -167,6 +348,7 @@ void sigpipe_handler(int sig) {
     return;
 }
 
+// 改为并发
 void *thread(void *vargp)
 {
     Pthread_detach(pthread_self());
@@ -199,6 +381,8 @@ int main(int argc, char **argv) {
 
     struct sockaddr_storage clientaddr;
 
+    init_Cache();
+
     pthread_t tid;
 
     if (argc != 2) {
@@ -226,10 +410,6 @@ int main(int argc, char **argv) {
 
         Getnameinfo((SA *) &clientaddr, clientlen, hostname, MAXLINE, port, MAXLINE, 0);
         printf("Accepted connection from (%s %s).\n", hostname, port);
-
-//        doit(connfd);
-        //关闭客户端的连接描述符
-//        Close(connfd);
     }
     return 0;
 }

@@ -15,11 +15,27 @@
 
 # Command Line History (newest to oldest):
 :wq
-|2,0,1700181066,,"wq"
-:Wq
-|2,0,1698989742,,"Wq"
+|2,0,1701094954,,"wq"
+:%!xxd -r
+|2,0,1701086835,,"%!xxd -r"
+:%!xxd
+|2,0,1701086818,,"%!xxd"
+:qa!
+|2,0,1701072677,,"qa!"
+:w new_file.txt
+|2,0,1701072660,,"w new_file.txt"
+:!xxd
+|2,0,1701058560,,"!xxd"
+:%xxd -r
+|2,0,1701058509,,"%xxd -r"
+:wq!
+|2,0,1701058904,,"wq!"
 :qa
-|2,0,1698988052,,"qa"
+|2,0,1701058897,,"qa"
+:qw
+|2,0,1701057943,,"qw"
+:Wq
+|2,0,1701057295,,"Wq"
 :ew
 |2,0,1698981033,,"ew"
 :we
@@ -39,261 +55,404 @@
 
 # Registers:
 ""1	LINE	0
-	2147483648`
-|3,1,1,1,1,0,1700026238,"2147483648`"
+	            fclose(f);
+|3,1,1,1,1,0,1701093975,"            fclose(f);"
 "2	LINE	0
-	    printf("\n");
-|3,0,2,1,1,0,1699265723,"    printf(\"\\n\");"
+	        fclose(f);
+|3,0,2,1,1,0,1701093968,"        fclose(f);"
 "3	LINE	0
-	  //WRITE ME!
-|3,0,3,1,1,0,1699265640,"  //WRITE ME!"
+	afsï¿½dfd16k
+|3,0,3,1,1,0,1701086798,"afsï¿½dfd16k"
 "4	LINE	0
-	    }
-|3,0,4,1,1,0,1698994186,"    }"
+	1234567890ÿsfdsfddgfg
+|3,0,4,1,1,0,1701086796,"1234567890ÿsfdsfddgfg"
 "5	LINE	0
-		    printf("%d", array[i]);
-|3,0,5,1,1,0,1698994185,"	    printf(\"%d\", array[i]);"
+	00000010: 6b6c 6f70 740a                           klopt.
+|3,0,5,1,1,0,1701073284,"00000010: 6b6c 6f70 740a                           klopt."
 "6	LINE	0
-		    printf("%d", array[i]);
-|3,0,6,1,1,0,1698994185,"	    printf(\"%d\", array[i]);"
+	00000000: 6161 6161 6161 6161 6161 FF62 6463 626a  aaaaaaaaaa.bdcbj
+|3,0,6,1,1,0,1701073283,"00000000: 6161 6161 6161 6161 6161 FF62 6463 626a  aaaaaaaaaa.bdcbj"
 "7	LINE	0
-	            array[i] = array[i] - '0'; 
-|3,0,7,1,1,0,1698994184,"            array[i] = array[i] - '0'; "
+	alkslfklff
+|3,0,7,1,1,0,1701073070,"alkslfklff"
 "8	LINE	0
-	            array[i] = array[i] - '0'; 
-|3,0,8,1,1,0,1698994184,"            array[i] = array[i] - '0'; "
+	sflsjflddg
+|3,0,8,1,1,0,1701073069,"sflsjflddg"
 "9	LINE	0
-	        if (array[i] >= '0' && array[i] <= '9') {
-|3,0,9,1,1,0,1698994183,"        if (array[i] >= '0' && array[i] <= '9') {"
+	 jlfjslfjd
+|3,0,9,1,1,0,1701073069," jlfjslfjd"
 "-	CHAR	0
 	%
 |3,0,36,0,1,0,1698988465,"%"
 
 # File marks:
-'0  1  0  ~/learn2prog/c3prj1_deck/deck.c
-|4,48,1,0,1700181114,"~/learn2prog/c3prj1_deck/deck.c"
-'1  27  33  ~/learn2prog/c3prj1_deck/deck.c
-|4,49,27,33,1700181066,"~/learn2prog/c3prj1_deck/deck.c"
-'2  26  0  ~/learn2prog/c3prj1_deck/deck.c
-|4,50,26,0,1700180880,"~/learn2prog/c3prj1_deck/deck.c"
-'3  26  0  ~/learn2prog/c3prj1_deck/deck.c
-|4,51,26,0,1700180880,"~/learn2prog/c3prj1_deck/deck.c"
-'4  24  0  ~/learn2prog/23_power_rec/power.c
-|4,52,24,0,1700032365,"~/learn2prog/23_power_rec/power.c"
-'5  8  13  ~/learn2prog/23_power_rec/power.c
-|4,53,8,13,1700032344,"~/learn2prog/23_power_rec/power.c"
-'6  4  13  ~/learn2prog/23_power_rec/power.c
-|4,54,4,13,1700032260,"~/learn2prog/23_power_rec/power.c"
-'7  4  13  ~/learn2prog/23_power_rec/power.c
-|4,55,4,13,1700032260,"~/learn2prog/23_power_rec/power.c"
-'8  24  0  ~/learn2prog/23_power_rec/power.c
-|4,56,24,0,1700032168,"~/learn2prog/23_power_rec/power.c"
-'9  24  0  ~/learn2prog/23_power_rec/power.c
-|4,57,24,0,1700032168,"~/learn2prog/23_power_rec/power.c"
+'0  78  0  ~/learn2prog/27_matrix_input/rotateMatrix.c
+|4,48,78,0,1701094954,"~/learn2prog/27_matrix_input/rotateMatrix.c"
+'1  76  0  ~/learn2prog/27_matrix_input/rotateMatrix.c
+|4,49,76,0,1701094464,"~/learn2prog/27_matrix_input/rotateMatrix.c"
+'2  76  0  ~/learn2prog/27_matrix_input/rotateMatrix.c
+|4,50,76,0,1701094464,"~/learn2prog/27_matrix_input/rotateMatrix.c"
+'3  16  12  ~/learn2prog/27_matrix_input/rotateMatrix.c
+|4,51,16,12,1701093983,"~/learn2prog/27_matrix_input/rotateMatrix.c"
+'4  16  12  ~/learn2prog/27_matrix_input/rotateMatrix.c
+|4,52,16,12,1701093983,"~/learn2prog/27_matrix_input/rotateMatrix.c"
+'5  16  12  ~/learn2prog/27_matrix_input/rotateMatrix.c
+|4,53,16,12,1701093983,"~/learn2prog/27_matrix_input/rotateMatrix.c"
+'6  16  12  ~/learn2prog/27_matrix_input/rotateMatrix.c
+|4,54,16,12,1701093983,"~/learn2prog/27_matrix_input/rotateMatrix.c"
+'7  76  0  ~/learn2prog/27_matrix_input/rotateMatrix.c
+|4,55,76,0,1701093227,"~/learn2prog/27_matrix_input/rotateMatrix.c"
+'8  78  0  ~/learn2prog/27_matrix_input/rotateMatrix.c
+|4,56,78,0,1701093227,"~/learn2prog/27_matrix_input/rotateMatrix.c"
+'9  78  0  ~/learn2prog/27_matrix_input/rotateMatrix.c
+|4,57,78,0,1701093227,"~/learn2prog/27_matrix_input/rotateMatrix.c"
 
 # Jumplist (newest first):
--'  1  0  ~/learn2prog/c3prj1_deck/deck.c
-|4,39,1,0,1700181114,"~/learn2prog/c3prj1_deck/deck.c"
--'  27  33  ~/learn2prog/c3prj1_deck/deck.c
-|4,39,27,33,1700181066,"~/learn2prog/c3prj1_deck/deck.c"
--'  26  0  ~/learn2prog/c3prj1_deck/deck.c
-|4,39,26,0,1700181049,"~/learn2prog/c3prj1_deck/deck.c"
--'  26  0  ~/learn2prog/c3prj1_deck/deck.c
-|4,39,26,0,1700180880,"~/learn2prog/c3prj1_deck/deck.c"
--'  1  0  ~/learn2prog/c3prj1_deck/deck.c
-|4,39,1,0,1700180869,"~/learn2prog/c3prj1_deck/deck.c"
--'  1  0  ~/learn2prog/c3prj1_deck/deck.c
-|4,39,1,0,1700180869,"~/learn2prog/c3prj1_deck/deck.c"
--'  24  0  ~/learn2prog/23_power_rec/power.c
-|4,39,24,0,1700032365,"~/learn2prog/23_power_rec/power.c"
--'  24  0  ~/learn2prog/23_power_rec/power.c
-|4,39,24,0,1700032365,"~/learn2prog/23_power_rec/power.c"
--'  24  0  ~/learn2prog/23_power_rec/power.c
-|4,39,24,0,1700032365,"~/learn2prog/23_power_rec/power.c"
--'  24  0  ~/learn2prog/23_power_rec/power.c
-|4,39,24,0,1700032365,"~/learn2prog/23_power_rec/power.c"
--'  24  0  ~/learn2prog/23_power_rec/power.c
-|4,39,24,0,1700032365,"~/learn2prog/23_power_rec/power.c"
--'  8  13  ~/learn2prog/23_power_rec/power.c
-|4,39,8,13,1700032344,"~/learn2prog/23_power_rec/power.c"
--'  8  13  ~/learn2prog/23_power_rec/power.c
-|4,39,8,13,1700032344,"~/learn2prog/23_power_rec/power.c"
--'  8  13  ~/learn2prog/23_power_rec/power.c
-|4,39,8,13,1700032344,"~/learn2prog/23_power_rec/power.c"
--'  8  13  ~/learn2prog/23_power_rec/power.c
-|4,39,8,13,1700032344,"~/learn2prog/23_power_rec/power.c"
--'  8  13  ~/learn2prog/23_power_rec/power.c
-|4,39,8,13,1700032344,"~/learn2prog/23_power_rec/power.c"
--'  4  13  ~/learn2prog/23_power_rec/power.c
-|4,39,4,13,1700032320,"~/learn2prog/23_power_rec/power.c"
--'  4  13  ~/learn2prog/23_power_rec/power.c
-|4,39,4,13,1700032320,"~/learn2prog/23_power_rec/power.c"
--'  4  13  ~/learn2prog/23_power_rec/power.c
-|4,39,4,13,1700032320,"~/learn2prog/23_power_rec/power.c"
--'  4  13  ~/learn2prog/23_power_rec/power.c
-|4,39,4,13,1700032320,"~/learn2prog/23_power_rec/power.c"
--'  4  13  ~/learn2prog/23_power_rec/power.c
-|4,39,4,13,1700032320,"~/learn2prog/23_power_rec/power.c"
--'  4  13  ~/learn2prog/23_power_rec/power.c
-|4,39,4,13,1700032260,"~/learn2prog/23_power_rec/power.c"
--'  4  13  ~/learn2prog/23_power_rec/power.c
-|4,39,4,13,1700032260,"~/learn2prog/23_power_rec/power.c"
--'  4  13  ~/learn2prog/23_power_rec/power.c
-|4,39,4,13,1700032260,"~/learn2prog/23_power_rec/power.c"
--'  4  13  ~/learn2prog/23_power_rec/power.c
-|4,39,4,13,1700032260,"~/learn2prog/23_power_rec/power.c"
--'  4  13  ~/learn2prog/23_power_rec/power.c
-|4,39,4,13,1700032260,"~/learn2prog/23_power_rec/power.c"
--'  24  0  ~/learn2prog/23_power_rec/power.c
-|4,39,24,0,1700032248,"~/learn2prog/23_power_rec/power.c"
--'  21  0  ~/learn2prog/23_power_rec/power.c
-|4,39,21,0,1700032248,"~/learn2prog/23_power_rec/power.c"
--'  24  0  ~/learn2prog/23_power_rec/power.c
-|4,39,24,0,1700032248,"~/learn2prog/23_power_rec/power.c"
--'  21  0  ~/learn2prog/23_power_rec/power.c
-|4,39,21,0,1700032248,"~/learn2prog/23_power_rec/power.c"
--'  24  0  ~/learn2prog/23_power_rec/power.c
-|4,39,24,0,1700032248,"~/learn2prog/23_power_rec/power.c"
--'  21  0  ~/learn2prog/23_power_rec/power.c
-|4,39,21,0,1700032248,"~/learn2prog/23_power_rec/power.c"
--'  24  0  ~/learn2prog/23_power_rec/power.c
-|4,39,24,0,1700032248,"~/learn2prog/23_power_rec/power.c"
--'  21  0  ~/learn2prog/23_power_rec/power.c
-|4,39,21,0,1700032248,"~/learn2prog/23_power_rec/power.c"
--'  24  0  ~/learn2prog/23_power_rec/power.c
-|4,39,24,0,1700032248,"~/learn2prog/23_power_rec/power.c"
--'  21  0  ~/learn2prog/23_power_rec/power.c
-|4,39,21,0,1700032248,"~/learn2prog/23_power_rec/power.c"
--'  21  0  ~/learn2prog/23_power_rec/power.c
-|4,39,21,0,1700032168,"~/learn2prog/23_power_rec/power.c"
--'  21  0  ~/learn2prog/23_power_rec/power.c
-|4,39,21,0,1700032168,"~/learn2prog/23_power_rec/power.c"
--'  21  0  ~/learn2prog/23_power_rec/power.c
-|4,39,21,0,1700032168,"~/learn2prog/23_power_rec/power.c"
--'  21  0  ~/learn2prog/23_power_rec/power.c
-|4,39,21,0,1700032168,"~/learn2prog/23_power_rec/power.c"
--'  21  0  ~/learn2prog/23_power_rec/power.c
-|4,39,21,0,1700032168,"~/learn2prog/23_power_rec/power.c"
--'  1  0  ~/learn2prog/23_power_rec/power.c
-|4,39,1,0,1700032162,"~/learn2prog/23_power_rec/power.c"
--'  1  0  ~/learn2prog/23_power_rec/power.c
-|4,39,1,0,1700032162,"~/learn2prog/23_power_rec/power.c"
--'  1  0  ~/learn2prog/23_power_rec/power.c
-|4,39,1,0,1700032162,"~/learn2prog/23_power_rec/power.c"
--'  1  0  ~/learn2prog/23_power_rec/power.c
-|4,39,1,0,1700032162,"~/learn2prog/23_power_rec/power.c"
--'  1  0  ~/learn2prog/23_power_rec/power.c
-|4,39,1,0,1700032162,"~/learn2prog/23_power_rec/power.c"
--'  1  0  ~/learn2prog/23_power_rec/power.c
-|4,39,1,0,1700032162,"~/learn2prog/23_power_rec/power.c"
--'  1  0  ~/learn2prog/23_power_rec/power.c
-|4,39,1,0,1700032162,"~/learn2prog/23_power_rec/power.c"
--'  1  0  ~/learn2prog/23_power_rec/power.c
-|4,39,1,0,1700032162,"~/learn2prog/23_power_rec/power.c"
--'  1  0  ~/learn2prog/23_power_rec/power.c
-|4,39,1,0,1700032162,"~/learn2prog/23_power_rec/power.c"
--'  1  0  ~/learn2prog/23_power_rec/power.c
-|4,39,1,0,1700032162,"~/learn2prog/23_power_rec/power.c"
--'  1  0  ~/learn2prog/23_power_rec/power.c
-|4,39,1,0,1700032162,"~/learn2prog/23_power_rec/power.c"
--'  1  0  ~/learn2prog/23_power_rec/power.c
-|4,39,1,0,1700032162,"~/learn2prog/23_power_rec/power.c"
--'  1  0  ~/learn2prog/23_power_rec/power.c
-|4,39,1,0,1700032162,"~/learn2prog/23_power_rec/power.c"
--'  1  0  ~/learn2prog/23_power_rec/power.c
-|4,39,1,0,1700032162,"~/learn2prog/23_power_rec/power.c"
--'  1  0  ~/learn2prog/23_power_rec/power.c
-|4,39,1,0,1700032162,"~/learn2prog/23_power_rec/power.c"
--'  27  0  ~/learn2prog/23_power_rec/power.c
-|4,39,27,0,1700029428,"~/learn2prog/23_power_rec/power.c"
--'  24  0  ~/learn2prog/23_power_rec/power.c
-|4,39,24,0,1700029428,"~/learn2prog/23_power_rec/power.c"
--'  24  0  ~/learn2prog/23_power_rec/power.c
-|4,39,24,0,1700029428,"~/learn2prog/23_power_rec/power.c"
--'  24  0  ~/learn2prog/23_power_rec/power.c
-|4,39,24,0,1700029428,"~/learn2prog/23_power_rec/power.c"
--'  27  0  ~/learn2prog/23_power_rec/power.c
-|4,39,27,0,1700029428,"~/learn2prog/23_power_rec/power.c"
--'  24  0  ~/learn2prog/23_power_rec/power.c
-|4,39,24,0,1700029428,"~/learn2prog/23_power_rec/power.c"
--'  24  0  ~/learn2prog/23_power_rec/power.c
-|4,39,24,0,1700029428,"~/learn2prog/23_power_rec/power.c"
--'  24  0  ~/learn2prog/23_power_rec/power.c
-|4,39,24,0,1700029428,"~/learn2prog/23_power_rec/power.c"
--'  27  0  ~/learn2prog/23_power_rec/power.c
-|4,39,27,0,1700029428,"~/learn2prog/23_power_rec/power.c"
--'  24  0  ~/learn2prog/23_power_rec/power.c
-|4,39,24,0,1700029428,"~/learn2prog/23_power_rec/power.c"
--'  24  0  ~/learn2prog/23_power_rec/power.c
-|4,39,24,0,1700029428,"~/learn2prog/23_power_rec/power.c"
--'  24  0  ~/learn2prog/23_power_rec/power.c
-|4,39,24,0,1700029428,"~/learn2prog/23_power_rec/power.c"
--'  27  0  ~/learn2prog/23_power_rec/power.c
-|4,39,27,0,1700029428,"~/learn2prog/23_power_rec/power.c"
--'  24  0  ~/learn2prog/23_power_rec/power.c
-|4,39,24,0,1700029428,"~/learn2prog/23_power_rec/power.c"
--'  24  0  ~/learn2prog/23_power_rec/power.c
-|4,39,24,0,1700029428,"~/learn2prog/23_power_rec/power.c"
--'  24  0  ~/learn2prog/23_power_rec/power.c
-|4,39,24,0,1700029428,"~/learn2prog/23_power_rec/power.c"
--'  27  0  ~/learn2prog/23_power_rec/power.c
-|4,39,27,0,1700029428,"~/learn2prog/23_power_rec/power.c"
--'  24  0  ~/learn2prog/23_power_rec/power.c
-|4,39,24,0,1700029428,"~/learn2prog/23_power_rec/power.c"
--'  24  0  ~/learn2prog/23_power_rec/power.c
-|4,39,24,0,1700029428,"~/learn2prog/23_power_rec/power.c"
--'  24  0  ~/learn2prog/23_power_rec/power.c
-|4,39,24,0,1700029428,"~/learn2prog/23_power_rec/power.c"
--'  1  0  ~/learn2prog/23_power_rec/power.c
-|4,39,1,0,1700029419,"~/learn2prog/23_power_rec/power.c"
--'  1  0  ~/learn2prog/23_power_rec/power.c
-|4,39,1,0,1700029419,"~/learn2prog/23_power_rec/power.c"
--'  1  0  ~/learn2prog/23_power_rec/power.c
-|4,39,1,0,1700029419,"~/learn2prog/23_power_rec/power.c"
--'  1  0  ~/learn2prog/23_power_rec/power.c
-|4,39,1,0,1700029419,"~/learn2prog/23_power_rec/power.c"
--'  1  0  ~/learn2prog/23_power_rec/power.c
-|4,39,1,0,1700029419,"~/learn2prog/23_power_rec/power.c"
--'  1  0  ~/learn2prog/23_power_rec/power.c
-|4,39,1,0,1700029419,"~/learn2prog/23_power_rec/power.c"
--'  1  0  ~/learn2prog/23_power_rec/power.c
-|4,39,1,0,1700029419,"~/learn2prog/23_power_rec/power.c"
--'  1  0  ~/learn2prog/23_power_rec/power.c
-|4,39,1,0,1700029419,"~/learn2prog/23_power_rec/power.c"
--'  1  0  ~/learn2prog/23_power_rec/power.c
-|4,39,1,0,1700029419,"~/learn2prog/23_power_rec/power.c"
--'  1  0  ~/learn2prog/23_power_rec/power.c
-|4,39,1,0,1700029419,"~/learn2prog/23_power_rec/power.c"
--'  18  0  ~/learn2prog/22_tests_power/test-power.c
-|4,39,18,0,1700026981,"~/learn2prog/22_tests_power/test-power.c"
--'  18  0  ~/learn2prog/22_tests_power/test-power.c
-|4,39,18,0,1700026981,"~/learn2prog/22_tests_power/test-power.c"
--'  18  0  ~/learn2prog/22_tests_power/test-power.c
-|4,39,18,0,1700026981,"~/learn2prog/22_tests_power/test-power.c"
--'  18  0  ~/learn2prog/22_tests_power/test-power.c
-|4,39,18,0,1700026981,"~/learn2prog/22_tests_power/test-power.c"
--'  18  0  ~/learn2prog/22_tests_power/test-power.c
-|4,39,18,0,1700026981,"~/learn2prog/22_tests_power/test-power.c"
--'  18  0  ~/learn2prog/22_tests_power/test-power.c
-|4,39,18,0,1700026981,"~/learn2prog/22_tests_power/test-power.c"
--'  18  0  ~/learn2prog/22_tests_power/test-power.c
-|4,39,18,0,1700026981,"~/learn2prog/22_tests_power/test-power.c"
--'  18  0  ~/learn2prog/22_tests_power/test-power.c
-|4,39,18,0,1700026981,"~/learn2prog/22_tests_power/test-power.c"
--'  18  0  ~/learn2prog/22_tests_power/test-power.c
-|4,39,18,0,1700026981,"~/learn2prog/22_tests_power/test-power.c"
--'  18  0  ~/learn2prog/22_tests_power/test-power.c
-|4,39,18,0,1700026981,"~/learn2prog/22_tests_power/test-power.c"
--'  18  0  ~/learn2prog/22_tests_power/test-power.c
-|4,39,18,0,1700026981,"~/learn2prog/22_tests_power/test-power.c"
--'  18  0  ~/learn2prog/22_tests_power/test-power.c
-|4,39,18,0,1700026981,"~/learn2prog/22_tests_power/test-power.c"
--'  18  0  ~/learn2prog/22_tests_power/test-power.c
-|4,39,18,0,1700026981,"~/learn2prog/22_tests_power/test-power.c"
--'  18  0  ~/learn2prog/22_tests_power/test-power.c
-|4,39,18,0,1700026981,"~/learn2prog/22_tests_power/test-power.c"
+-'  78  0  ~/learn2prog/27_matrix_input/rotateMatrix.c
+|4,39,78,0,1701094954,"~/learn2prog/27_matrix_input/rotateMatrix.c"
+-'  1  0  ~/learn2prog/27_matrix_input/rotateMatrix.c
+|4,39,1,0,1701094950,"~/learn2prog/27_matrix_input/rotateMatrix.c"
+-'  76  0  ~/learn2prog/27_matrix_input/rotateMatrix.c
+|4,39,76,0,1701094464,"~/learn2prog/27_matrix_input/rotateMatrix.c"
+-'  76  0  ~/learn2prog/27_matrix_input/rotateMatrix.c
+|4,39,76,0,1701094464,"~/learn2prog/27_matrix_input/rotateMatrix.c"
+-'  1  0  ~/learn2prog/27_matrix_input/rotateMatrix.c
+|4,39,1,0,1701094458,"~/learn2prog/27_matrix_input/rotateMatrix.c"
+-'  16  12  ~/learn2prog/27_matrix_input/rotateMatrix.c
+|4,39,16,12,1701093983,"~/learn2prog/27_matrix_input/rotateMatrix.c"
+-'  16  12  ~/learn2prog/27_matrix_input/rotateMatrix.c
+|4,39,16,12,1701093983,"~/learn2prog/27_matrix_input/rotateMatrix.c"
+-'  16  12  ~/learn2prog/27_matrix_input/rotateMatrix.c
+|4,39,16,12,1701093983,"~/learn2prog/27_matrix_input/rotateMatrix.c"
+-'  76  0  ~/learn2prog/27_matrix_input/rotateMatrix.c
+|4,39,76,0,1701093958,"~/learn2prog/27_matrix_input/rotateMatrix.c"
+-'  78  0  ~/learn2prog/27_matrix_input/rotateMatrix.c
+|4,39,78,0,1701093227,"~/learn2prog/27_matrix_input/rotateMatrix.c"
+-'  78  0  ~/learn2prog/27_matrix_input/rotateMatrix.c
+|4,39,78,0,1701093227,"~/learn2prog/27_matrix_input/rotateMatrix.c"
+-'  1  0  ~/learn2prog/27_matrix_input/rotateMatrix.c
+|4,39,1,0,1701093220,"~/learn2prog/27_matrix_input/rotateMatrix.c"
+-'  1  0  ~/learn2prog/27_matrix_input/rotateMatrix.c
+|4,39,1,0,1701093220,"~/learn2prog/27_matrix_input/rotateMatrix.c"
+-'  4  0  ~/learn2prog/27_matrix_input/Makefile
+|4,39,4,0,1701091114,"~/learn2prog/27_matrix_input/Makefile"
+-'  4  0  ~/learn2prog/27_matrix_input/Makefile
+|4,39,4,0,1701091114,"~/learn2prog/27_matrix_input/Makefile"
+-'  4  0  ~/learn2prog/27_matrix_input/Makefile
+|4,39,4,0,1701091114,"~/learn2prog/27_matrix_input/Makefile"
+-'  4  0  ~/learn2prog/27_matrix_input/Makefile
+|4,39,4,0,1701091114,"~/learn2prog/27_matrix_input/Makefile"
+-'  4  0  ~/learn2prog/27_matrix_input/Makefile
+|4,39,4,0,1701091114,"~/learn2prog/27_matrix_input/Makefile"
+-'  4  0  ~/learn2prog/27_matrix_input/Makefile
+|4,39,4,0,1701091114,"~/learn2prog/27_matrix_input/Makefile"
+-'  4  0  ~/learn2prog/27_matrix_input/Makefile
+|4,39,4,0,1701091114,"~/learn2prog/27_matrix_input/Makefile"
+-'  4  0  ~/learn2prog/27_matrix_input/Makefile
+|4,39,4,0,1701091114,"~/learn2prog/27_matrix_input/Makefile"
+-'  4  0  ~/learn2prog/27_matrix_input/Makefile
+|4,39,4,0,1701091114,"~/learn2prog/27_matrix_input/Makefile"
+-'  4  0  ~/learn2prog/27_matrix_input/Makefile
+|4,39,4,0,1701091114,"~/learn2prog/27_matrix_input/Makefile"
+-'  4  0  ~/learn2prog/27_matrix_input/Makefile
+|4,39,4,0,1701091114,"~/learn2prog/27_matrix_input/Makefile"
+-'  4  0  ~/learn2prog/27_matrix_input/Makefile
+|4,39,4,0,1701091114,"~/learn2prog/27_matrix_input/Makefile"
+-'  4  0  ~/learn2prog/27_matrix_input/Makefile
+|4,39,4,0,1701091114,"~/learn2prog/27_matrix_input/Makefile"
+-'  4  0  ~/learn2prog/27_matrix_input/Makefile
+|4,39,4,0,1701091114,"~/learn2prog/27_matrix_input/Makefile"
+-'  4  0  ~/learn2prog/27_matrix_input/Makefile
+|4,39,4,0,1701091114,"~/learn2prog/27_matrix_input/Makefile"
+-'  4  0  ~/learn2prog/27_matrix_input/Makefile
+|4,39,4,0,1701091114,"~/learn2prog/27_matrix_input/Makefile"
+-'  1  0  ~/learn2prog/27_matrix_input/Makefile
+|4,39,1,0,1701091109,"~/learn2prog/27_matrix_input/Makefile"
+-'  1  0  ~/learn2prog/27_matrix_input/Makefile
+|4,39,1,0,1701091109,"~/learn2prog/27_matrix_input/Makefile"
+-'  1  0  ~/learn2prog/27_matrix_input/Makefile
+|4,39,1,0,1701091109,"~/learn2prog/27_matrix_input/Makefile"
+-'  1  0  ~/learn2prog/27_matrix_input/Makefile
+|4,39,1,0,1701091109,"~/learn2prog/27_matrix_input/Makefile"
+-'  1  0  ~/learn2prog/27_matrix_input/Makefile
+|4,39,1,0,1701091109,"~/learn2prog/27_matrix_input/Makefile"
+-'  1  0  ~/learn2prog/27_matrix_input/Makefile
+|4,39,1,0,1701091109,"~/learn2prog/27_matrix_input/Makefile"
+-'  1  0  ~/learn2prog/27_matrix_input/Makefile
+|4,39,1,0,1701091109,"~/learn2prog/27_matrix_input/Makefile"
+-'  1  0  ~/learn2prog/27_matrix_input/Makefile
+|4,39,1,0,1701091109,"~/learn2prog/27_matrix_input/Makefile"
+-'  1  0  ~/learn2prog/27_matrix_input/Makefile
+|4,39,1,0,1701091109,"~/learn2prog/27_matrix_input/Makefile"
+-'  1  0  ~/learn2prog/27_matrix_input/Makefile
+|4,39,1,0,1701091109,"~/learn2prog/27_matrix_input/Makefile"
+-'  1  0  ~/learn2prog/27_matrix_input/Makefile
+|4,39,1,0,1701091109,"~/learn2prog/27_matrix_input/Makefile"
+-'  1  0  ~/learn2prog/27_matrix_input/Makefile
+|4,39,1,0,1701091109,"~/learn2prog/27_matrix_input/Makefile"
+-'  1  0  ~/learn2prog/27_matrix_input/Makefile
+|4,39,1,0,1701091109,"~/learn2prog/27_matrix_input/Makefile"
+-'  1  0  ~/learn2prog/27_matrix_input/Makefile
+|4,39,1,0,1701091109,"~/learn2prog/27_matrix_input/Makefile"
+-'  1  0  ~/learn2prog/27_matrix_input/Makefile
+|4,39,1,0,1701091109,"~/learn2prog/27_matrix_input/Makefile"
+-'  1  0  ~/learn2prog/27_matrix_input/Makefile
+|4,39,1,0,1701091109,"~/learn2prog/27_matrix_input/Makefile"
+-'  75  0  ~/learn2prog/27_matrix_input/rotateMatrix.c
+|4,39,75,0,1701091099,"~/learn2prog/27_matrix_input/rotateMatrix.c"
+-'  77  0  ~/learn2prog/27_matrix_input/rotateMatrix.c
+|4,39,77,0,1701091099,"~/learn2prog/27_matrix_input/rotateMatrix.c"
+-'  75  0  ~/learn2prog/27_matrix_input/rotateMatrix.c
+|4,39,75,0,1701091099,"~/learn2prog/27_matrix_input/rotateMatrix.c"
+-'  77  0  ~/learn2prog/27_matrix_input/rotateMatrix.c
+|4,39,77,0,1701091099,"~/learn2prog/27_matrix_input/rotateMatrix.c"
+-'  75  0  ~/learn2prog/27_matrix_input/rotateMatrix.c
+|4,39,75,0,1701091099,"~/learn2prog/27_matrix_input/rotateMatrix.c"
+-'  77  0  ~/learn2prog/27_matrix_input/rotateMatrix.c
+|4,39,77,0,1701091099,"~/learn2prog/27_matrix_input/rotateMatrix.c"
+-'  77  0  ~/learn2prog/27_matrix_input/rotateMatrix.c
+|4,39,77,0,1701091099,"~/learn2prog/27_matrix_input/rotateMatrix.c"
+-'  77  0  ~/learn2prog/27_matrix_input/rotateMatrix.c
+|4,39,77,0,1701091099,"~/learn2prog/27_matrix_input/rotateMatrix.c"
+-'  1  0  ~/learn2prog/27_matrix_input/rotateMatrix.c
+|4,39,1,0,1701091089,"~/learn2prog/27_matrix_input/rotateMatrix.c"
+-'  1  0  ~/learn2prog/27_matrix_input/rotateMatrix.c
+|4,39,1,0,1701091089,"~/learn2prog/27_matrix_input/rotateMatrix.c"
+-'  1  0  ~/learn2prog/26_tests_matrix_input/6_test.txt
+|4,39,1,0,1701086841,"~/learn2prog/26_tests_matrix_input/6_test.txt"
+-'  1  0  ~/learn2prog/26_tests_matrix_input/6_test.txt
+|4,39,1,0,1701086841,"~/learn2prog/26_tests_matrix_input/6_test.txt"
+-'  1  0  ~/learn2prog/26_tests_matrix_input/6_test.txt
+|4,39,1,0,1701086841,"~/learn2prog/26_tests_matrix_input/6_test.txt"
+-'  1  0  ~/learn2prog/26_tests_matrix_input/6_test.txt
+|4,39,1,0,1701086841,"~/learn2prog/26_tests_matrix_input/6_test.txt"
+-'  1  0  ~/learn2prog/26_tests_matrix_input/6_test.txt
+|4,39,1,0,1701086841,"~/learn2prog/26_tests_matrix_input/6_test.txt"
+-'  1  0  ~/learn2prog/26_tests_matrix_input/6_test.txt
+|4,39,1,0,1701086841,"~/learn2prog/26_tests_matrix_input/6_test.txt"
+-'  1  0  ~/learn2prog/26_tests_matrix_input/6_test.txt
+|4,39,1,0,1701086841,"~/learn2prog/26_tests_matrix_input/6_test.txt"
+-'  1  0  ~/learn2prog/26_tests_matrix_input/6_test.txt
+|4,39,1,0,1701086841,"~/learn2prog/26_tests_matrix_input/6_test.txt"
+-'  1  0  ~/learn2prog/26_tests_matrix_input/6_test.txt
+|4,39,1,0,1701086841,"~/learn2prog/26_tests_matrix_input/6_test.txt"
+-'  1  0  ~/learn2prog/26_tests_matrix_input/6_test.txt
+|4,39,1,0,1701086841,"~/learn2prog/26_tests_matrix_input/6_test.txt"
+-'  1  0  ~/learn2prog/26_tests_matrix_input/6_test.txt
+|4,39,1,0,1701086841,"~/learn2prog/26_tests_matrix_input/6_test.txt"
+-'  1  0  ~/learn2prog/26_tests_matrix_input/6_test.txt
+|4,39,1,0,1701086841,"~/learn2prog/26_tests_matrix_input/6_test.txt"
+-'  1  0  ~/learn2prog/26_tests_matrix_input/6_test.txt
+|4,39,1,0,1701086841,"~/learn2prog/26_tests_matrix_input/6_test.txt"
+-'  1  0  ~/learn2prog/26_tests_matrix_input/6_test.txt
+|4,39,1,0,1701086841,"~/learn2prog/26_tests_matrix_input/6_test.txt"
+-'  1  0  ~/learn2prog/26_tests_matrix_input/6_test.txt
+|4,39,1,0,1701086841,"~/learn2prog/26_tests_matrix_input/6_test.txt"
+-'  1  0  ~/learn2prog/26_tests_matrix_input/6_test.txt
+|4,39,1,0,1701086841,"~/learn2prog/26_tests_matrix_input/6_test.txt"
+-'  1  0  ~/learn2prog/26_tests_matrix_input/6_test.txt
+|4,39,1,0,1701086841,"~/learn2prog/26_tests_matrix_input/6_test.txt"
+-'  1  0  ~/learn2prog/26_tests_matrix_input/6_test.txt
+|4,39,1,0,1701086841,"~/learn2prog/26_tests_matrix_input/6_test.txt"
+-'  1  0  ~/learn2prog/26_tests_matrix_input/6_test.txt
+|4,39,1,0,1701086841,"~/learn2prog/26_tests_matrix_input/6_test.txt"
+-'  1  0  ~/learn2prog/26_tests_matrix_input/6_test.txt
+|4,39,1,0,1701086841,"~/learn2prog/26_tests_matrix_input/6_test.txt"
+-'  1  0  ~/learn2prog/26_tests_matrix_input/6_test.txt
+|4,39,1,0,1701086841,"~/learn2prog/26_tests_matrix_input/6_test.txt"
+-'  1  0  ~/learn2prog/26_tests_matrix_input/6_test.txt
+|4,39,1,0,1701086841,"~/learn2prog/26_tests_matrix_input/6_test.txt"
+-'  1  0  ~/learn2prog/26_tests_matrix_input/6_test.txt
+|4,39,1,0,1701086841,"~/learn2prog/26_tests_matrix_input/6_test.txt"
+-'  1  0  ~/learn2prog/26_tests_matrix_input/6_test.txt
+|4,39,1,0,1701086841,"~/learn2prog/26_tests_matrix_input/6_test.txt"
+-'  1  0  ~/learn2prog/26_tests_matrix_input/6_test.txt
+|4,39,1,0,1701086841,"~/learn2prog/26_tests_matrix_input/6_test.txt"
+-'  1  0  ~/learn2prog/26_tests_matrix_input/6_test.txt
+|4,39,1,0,1701086841,"~/learn2prog/26_tests_matrix_input/6_test.txt"
+-'  1  0  ~/learn2prog/26_tests_matrix_input/6_test.txt
+|4,39,1,0,1701086841,"~/learn2prog/26_tests_matrix_input/6_test.txt"
+-'  1  0  ~/learn2prog/26_tests_matrix_input/6_test.txt
+|4,39,1,0,1701086841,"~/learn2prog/26_tests_matrix_input/6_test.txt"
+-'  1  0  ~/learn2prog/26_tests_matrix_input/6_test.txt
+|4,39,1,0,1701086841,"~/learn2prog/26_tests_matrix_input/6_test.txt"
+-'  1  0  ~/learn2prog/26_tests_matrix_input/6_test.txt
+|4,39,1,0,1701086841,"~/learn2prog/26_tests_matrix_input/6_test.txt"
+-'  1  0  ~/learn2prog/26_tests_matrix_input/6_test.txt
+|4,39,1,0,1701086841,"~/learn2prog/26_tests_matrix_input/6_test.txt"
+-'  1  0  ~/learn2prog/26_tests_matrix_input/6_test.txt
+|4,39,1,0,1701086841,"~/learn2prog/26_tests_matrix_input/6_test.txt"
+-'  1  0  ~/learn2prog/26_tests_matrix_input/6_test.txt
+|4,39,1,0,1701086841,"~/learn2prog/26_tests_matrix_input/6_test.txt"
+-'  1  0  ~/learn2prog/26_tests_matrix_input/6_test.txt
+|4,39,1,0,1701086841,"~/learn2prog/26_tests_matrix_input/6_test.txt"
+-'  1  0  ~/learn2prog/26_tests_matrix_input/6_test.txt
+|4,39,1,0,1701086841,"~/learn2prog/26_tests_matrix_input/6_test.txt"
+-'  1  0  ~/learn2prog/26_tests_matrix_input/6_test.txt
+|4,39,1,0,1701086841,"~/learn2prog/26_tests_matrix_input/6_test.txt"
+-'  1  0  ~/learn2prog/26_tests_matrix_input/6_test.txt
+|4,39,1,0,1701086841,"~/learn2prog/26_tests_matrix_input/6_test.txt"
+-'  1  0  ~/learn2prog/26_tests_matrix_input/6_test.txt
+|4,39,1,0,1701086841,"~/learn2prog/26_tests_matrix_input/6_test.txt"
+-'  1  0  ~/learn2prog/26_tests_matrix_input/6_test.txt
+|4,39,1,0,1701086841,"~/learn2prog/26_tests_matrix_input/6_test.txt"
+-'  1  0  ~/learn2prog/26_tests_matrix_input/6_test.txt
+|4,39,1,0,1701086841,"~/learn2prog/26_tests_matrix_input/6_test.txt"
+-'  1  0  ~/learn2prog/26_tests_matrix_input/6_test.txt
+|4,39,1,0,1701086841,"~/learn2prog/26_tests_matrix_input/6_test.txt"
+-'  1  0  ~/learn2prog/26_tests_matrix_input/6_test.txt
+|4,39,1,0,1701086841,"~/learn2prog/26_tests_matrix_input/6_test.txt"
+-'  1  0  ~/learn2prog/26_tests_matrix_input/6_test.txt
+|4,39,1,0,1701086841,"~/learn2prog/26_tests_matrix_input/6_test.txt"
+-'  1  0  ~/learn2prog/26_tests_matrix_input/6_test.txt
+|4,39,1,0,1701086841,"~/learn2prog/26_tests_matrix_input/6_test.txt"
+-'  1  0  ~/learn2prog/26_tests_matrix_input/6_test.txt
+|4,39,1,0,1701086841,"~/learn2prog/26_tests_matrix_input/6_test.txt"
 
 # History of marks within files (newest to oldest):
+
+> ~/learn2prog/27_matrix_input/rotateMatrix.c
+	*	1701094953	0
+	"	78	0
+	^	78	1
+	.	78	0
+	+	75	0
+	+	76	0
+	+	28	0
+	+	16	0
+	+	76	0
+	+	78	0
+
+> ~/learn2prog/27_matrix_input/Makefile
+	*	1701091113	0
+	"	4	0
+	^	4	0
+	.	3	0
+	+	3	0
+
+> ~/learn2prog/26_tests_matrix_input/6_test.txt
+	*	1701086839	0
+	"	1	0
+	^	1	37
+	.	1	0
+	+	1	10
+	+	1	7
+	+	1	0
+	+	1	9
+	+	1	10
+	+	1	9
+	+	1	36
+	+	1	0
+	+	5	0
+	+	1	36
+	+	1	0
+
+> ~/learn2prog/26_tests_matrix_input/5_test.txt
+	*	1701073301	0
+	"	1	0
+	^	1	5
+	.	1	0
+	+	1	10
+	+	1	36
+	+	1	37
+	+	1	0
+	+	1	36
+	+	1	0
+	+	1	16
+	+	1	9
+	+	1	33
+	+	1	19
+	+	1	0
+	+	1	32
+	+	1	9
+	+	1	0
+	+	1	10
+	+	1	36
+	+	1	0
+
+> ~/learn2prog/26_tests_matrix_input/tests.txt
+	*	1701072782	0
+	"	10	0
+	^	10	0
+	.	9	0
+	+	2	9
+	+	3	10
+	+	4	10
+	+	7	4
+	+	8	10
+	+	9	0
+
+> ~/learn2prog/26_tests_matrix_input/4_test.txt
+	*	1701056269	0
+	"	5	1
+	^	5	2
+	.	5	1
+	+	5	1
+
+> ~/learn2prog/26_tests_matrix_input/3_test.txt
+	*	1701056190	0
+	"	14	9
+	^	14	10
+	.	14	9
+	+	14	9
+
+> ~/learn2prog/26_tests_matrix_input/2_test.txt
+	*	1701056146	0
+	"	1	10
+	^	1	11
+	.	1	10
+	+	1	10
+
+> ~/learn2prog/26_tests_matrix_input/1_test.txt
+	*	1701056129	0
+	"	10	9
+	^	10	10
+	.	10	9
+	+	10	9
+
+> ~/learn2prog/25_break_encr/breaker.c
+	*	1701047335	0
+	"	27	14
+	^	26	32
+	.	26	31
+	+	68	0
+	+	45	0
+	+	50	0
+	+	49	4
+	+	45	0
+	+	15	20
+	+	26	31
+
+> ~/learn2prog/25_break_encr/main.c
+	*	1701004976	0
+	"	36	0
+	^	1	1
+	.	63	0
+	+	63	0
+
+> ~/learn2prog/25_break_encr/Makefile
+	*	1701003401	0
+	"	3	0
+	^	3	0
+	.	2	25
+	+	1	18
+	+	2	25
+
+> ~/learn2prog/24_read_arr3/answer.txt
+	*	1700195968	0
+	"	13	0
+	^	13	1
+	.	13	0
+	+	13	0
+
+> ~/learn2prog/c3prj2_eval/eval.c
+	*	1700190640	0
+	"	337	0
+	^	337	0
+	.	336	1
+	+	380	1
+	+	669	0
+	+	336	1
 
 > ~/learn2prog/c3prj1_deck/deck.c
 	*	1700180856	0
